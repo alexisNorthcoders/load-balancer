@@ -5,6 +5,7 @@ const morgan = require("morgan");
 
 const PORT = process.argv[2] || 3001;
 
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(morgan('dev'));
 app.get("/health", (req, res) => {
   res.sendStatus(200);
