@@ -1,0 +1,28 @@
+{
+  "name": "load-balancer",
+  "version": "1.0.0",
+  "description": "load balancer in nodejs",
+  "main": "backend.js",
+  "scripts": {
+    "start": "nodemon listen.js",
+    "start-server-3001": "nodemon backend.js 3001",
+    "start-server-3002": "nodemon backend.js 3002",
+    "start-server-3003": "nodemon backend.js 3003",
+    "start-servers": "concurrently \"npm run start-server-3001\" \"npm run start-server-3002\" \"npm run start-server-3003\"",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.4",
+    "supertest": "^7.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "jest": "^29.7.0",
+    "mocha": "^10.5.2"
+  }
+}
